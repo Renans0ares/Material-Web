@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Esse é o título na Aba</title>
+
+        <style>
+            table{
+                /* tamanho da tela, nesse caso, 100% */
+                width: 60%;
+            }
+            table, th, td {
+                border: 3px solid black; /*Toda a borda da tabela*/
+                border-collapse: collapse; /*Preenchimento da borda*/
+            }
+            th, td {
+                padding: 15px; /* Espaço entre o texto e a borda*/
+                text-align: left; /*Alinhamento do Texto*/
+            }
+            #t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            #t01 tr:nth-child(odd) {
+                background-color: #fff;
+            }
+            #t01 th {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Título com h1</h1>
+        <h2>Título com h2</h2>
+        <h3>Título com h3</h3>
+        <h4>Título com h4</h4>
+        <h5>Título com h5</h5>
+        <h6>Título com h6</h6>
+
+        <!--Paragrafo-->
+        <p>
+            Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Sit eos minima explicabo quod et temporibus, 
+            porro eaque rem magni vel commodi assumenda cumque dolore ad, quos qui dolorum tempora magnam?
+        </p>
+        <p>
+            Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Sit eos minima explicabo quod et temporibus, 
+            porro eaque rem magni vel commodi assumenda cumque dolore ad, quos qui dolorum tempora magnam?
+        </p>
+
+        <!--Listas-->
+
+        <ul>
+            <li>Lista de bolinhas</li>
+            <li>Lista item</li>
+            <li>Lista item</li>
+            <li>Lista item</li>
+        </ul>
+        
+        <ol>
+            <li>Lista numerada</li>
+            <li>Lista item</li>
+            <li>Lista item</li>
+            <li>Lista item</li>
+        </ol>
+
+        <table id="t01">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Renan</td>
+                    <td>renan.soares@limeira.sp.gov.br</td>
+                    <td>50209828811</td>
+                </tr>
+                <tr>
+                    <td>Yan</td>
+                    <td>yan.vitor@gmail.com</td>
+                    <td>31545678911</td>
+                </tr>
+                <tr>
+                    <td>Caio</td>
+                    <td>caio.felipe@gmail.com</td>
+                    <td>98776543212</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <hr> <!--Faz um risco na página-->
+        <br>
+
+        <!--Formulários-->
+
+        <forms action="process.php" method="POST">
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="nome" placeholder="Renan Soares Sousa">
+            </div>
+            <br>
+            <div>
+                <label >E-mail:</label>
+                <input type="email" name="email">
+            </div>
+            <br>
+            <div>
+                <label>Sobre:</label>
+                <textarea name="messagem"></textarea>
+            </div>
+            <br>
+            <div>
+                <label>Genero</label>
+                <select name="Genero">
+                    <option value="homen">Mano</option>
+                    <option value="mulher">Mina</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Idade</label>
+                <input type="number" name="idade">
+            </div>
+            <br>
+            <div>
+                <label>Aniversário</label>
+                <input type="date" name="data">
+            </div>
+            <br>
+            <div>
+                <input type="submit" name="Enviar">
+            </div>
+
+        </forms>
+
+        <div style="margin-top:500px"></div>
+    </body>
+</html>
